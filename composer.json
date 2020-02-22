@@ -1,0 +1,12 @@
+{
+  "name": "beelo/beelo",
+  "description": "Beelo CMS",
+  "minimum-stability": "stable",
+  "license": "AGPL-3.0-only",
+  "authors": [
+    {
+      "name": "flexice",
+      "email": "fl3xice@yandex.ru"
+    }
+  ]
+}
