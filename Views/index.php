@@ -22,7 +22,12 @@
         <h1>Welcome in Beelo</h1>
         <div class="btn-group" role="group" aria-label="Basic example">
             <a class="btn btn-primary" href="https://github.com/fl3xice/beelo" target="_blank">GitHub</a>
-            <a type="button" class="btn btn-success" href="#notworkcoomingsoon">Install</a>
+            <?php
+                if (!GlobalManager::CheckInstalled()) {
+                    print "<a type=\"button\" class=\"btn btn-success\" href=\"/install\">Install</a>";
+                }
+            ?>
+
         </div>
     </div>
 </div>

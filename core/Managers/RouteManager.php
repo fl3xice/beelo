@@ -21,6 +21,17 @@ class RouteManager extends Manager
             ViewsManager::GetView("admin");
         });
 
+        if (!GlobalManager::CheckInstalled())
+        {
+            $Router->get("/install", function () {
+                ViewsManager::GetView("install");
+            });
+        }
+
+        $Router->post("/action", function () {
+            ActionManager::InputAction($_POST);
+        });
+
         self::Run();
     }
 

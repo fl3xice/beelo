@@ -11,6 +11,8 @@
 
 class AirManager extends Manager
 {
+    protected const NAME_MANAGER = "AirManager";
+
     private array $variables = [];
 
     public function __construct($vars = [])
@@ -18,7 +20,7 @@ class AirManager extends Manager
         $this->variables = $vars;
     }
 
-    public function getVariable($id): array
+    public function getVariable($id)
     {
         return $this->variables[$id];
     }
