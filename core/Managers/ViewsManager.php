@@ -12,6 +12,9 @@ class ViewsManager extends Manager
             case "index":
                 return "Views/index.php";
                     break;
+            case "admin":
+                return "Views/admin/index.php";
+                break;
         }
     }
 
@@ -19,4 +22,6 @@ class ViewsManager extends Manager
     {
         require_once self::Views($NameView);
     }
+
+
 }

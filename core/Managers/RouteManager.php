@@ -18,7 +18,7 @@ class RouteManager extends Manager
         });
 
         $Router->get("/admin", function () {
-            print "Admin";
+            ViewsManager::GetView("admin");
         });
 
         self::Run();
