@@ -13,8 +13,8 @@
     "bramus/router": "1.4.2"
   },
   "autoload": {
-    "psr-4": {
-      "\\": "core/Managers"
+    "psr-0": {
+      "": "core/Managers/"
     }
   }
 }
