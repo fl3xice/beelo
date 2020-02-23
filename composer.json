@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "bramus/router": "1.4.2"
+    "bramus/router": "1.4.2",
+    "vlucas/phpdotenv": "4.0.x-dev"
   },
   "autoload": {
     "psr-0": {
