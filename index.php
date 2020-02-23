@@ -1,5 +1,7 @@
 <?php
 
+use Bramus\Router\Router;
+
 require_once "vendor/autoload.php";
 
-require_once "core/router.php";
+RouteManager::Router(new Router());
