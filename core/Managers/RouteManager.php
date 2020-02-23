@@ -5,6 +5,7 @@ use Bramus\Router\Router;
 
 class RouteManager extends Manager
 {
+    protected const NAME_MANAGER = "RouteManager";
 
     private static Router $Router;
 
@@ -13,7 +14,11 @@ class RouteManager extends Manager
         self::$Router = $Router;
 
         $Router->get("/", function () {
-            print "Hello";
+            ViewsManager::GetView("index");
+        });
+
+        $Router->get("/admin", function () {
+            print "Admin";
         });
 
         self::Run();
