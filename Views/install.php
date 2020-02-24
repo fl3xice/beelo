@@ -54,10 +54,23 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js" integrity="sha256-zs4Ql/EnwyWVY+mTbGS2WIMLdfYGtQOhkeUtOawKZVY=" crossorigin="anonymous"></script>
 
                 <script>
-
+                    let debug = false;
                     document.getElementById("next").addEventListener("click", () => {
+                        request_inf.
+                            name = "Connection";
+                        let result = btoa(JSON.stringify(request_inf));
                         $.ajax({
 
+                            method: "POST",
+                            url: "/action",
+                            data: {
+                                "action": result
+                            }
+
+                        }).done((data) => {
+                            if (debug)
+                                console.log(data);
+                            document.location.href = "/";
                         });
                     });
 

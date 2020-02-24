@@ -44,7 +44,8 @@ class ActionManager extends Manager
                 {
                     die(header("HTTP/1.0 401 Unauthorized"));
                 } else {
-                    print "Successful";
+                    file_put_contents("core/installed", json_encode($Action));
+                    print "Successfully";
                 }
                 break;
         }
