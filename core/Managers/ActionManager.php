@@ -29,6 +29,15 @@ class ActionManager extends Manager
             case "PrintPhpInfo":
                 print phpinfo();
                 break;
+            case "TestConnection":
+                $mysqli = mysqli_connect($Action['db_ip'],$Action['db_user'],$Action['db_password'],$Action['db_name'],$Action['db_port']);
+                if (!$mysqli)
+                {
+                    die(header("HTTP/1.0 401 Unauthorized"));
+                } else {
+                    print "Successful";
+                }
+                break;
         }
     }
 }

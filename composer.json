@@ -12,7 +12,9 @@
   "require": {
     "bramus/router": "1.4.2",
     "vlucas/phpdotenv": "4.0.x-dev",
-    "ext-json": "*"
+    "ext-json": "*",
+    "curl/curl": "2.2.0",
+    "ext-mysqli": "*"
   },
   "autoload": {
     "psr-0": {
