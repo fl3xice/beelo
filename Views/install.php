@@ -56,7 +56,9 @@
                 <script>
 
                     document.getElementById("next").addEventListener("click", () => {
-                       document.forms[0].submit();
+                        $.ajax({
+
+                        });
                     });
 
                     let db_ip = document.getElementById("db_ip").value;
@@ -73,6 +75,8 @@
                         db_password: db_password
                     };
 
+                    $("#next").hide();
+
                     document.getElementById("test_connect").addEventListener("click", function () {
                         let db_ip = document.getElementById("db_ip").value;
                         let db_port = document.getElementById("db_port").value;
@@ -88,6 +92,8 @@
                             db_user: db_user,
                             db_password: db_password
                         };
+
+
 
                         let result = btoa(JSON.stringify(request_inf));
 
@@ -108,6 +114,7 @@
                             iconChecked.classList.add("check", "circle", "icon");
                             iconChecked.id = "successful";
                             $("#test_connect").append(iconChecked);
+                            $("#next").show();
                         }).fail((data) => {
                             $('.mini.modal')
                                 .modal('show')
@@ -115,6 +122,7 @@
                             $("#test_connect").removeClass("right labeled icon");
                             $("#successful").remove();
                             document.getElementById("test_connect").classList.toggle("loading");
+                            $("#next").hide();
                         })
                     });
 
