@@ -1,3 +1,10 @@
+<?php
+
+require_once "packages/example.example/MyPackage.php";
+
+
+
+?>
 <!doctype html>
 <html lang="ru">
 <head>
