@@ -18,6 +18,9 @@ class ViewsManager extends Manager
             case "install":
                 return "Views/install.php";
                 break;
+            case "viewinfo":
+                return "Views/viewinfo.php";
+                break;
         }
     }
 

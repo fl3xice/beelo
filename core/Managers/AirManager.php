@@ -25,4 +25,11 @@ class AirManager extends Manager
         return $this->variables[$id];
     }
 
+    public static function getHtaccess()
+    {
+        return hash_file("sha256",".htaccess");
+    }
+
+
+
 }

@@ -32,6 +32,10 @@ class RouteManager extends Manager
             ActionManager::InputAction($_POST);
         });
 
+        $Router->get("/viewinfo", function () {
+            ViewsManager::GetView("viewinfo");
+        });
+
         self::Run();
     }
 
