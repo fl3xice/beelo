@@ -18,8 +18,10 @@
   },
   "autoload": {
     "psr-0": {
-      "": "core/Managers/",
-      "": "core/psi"
+      "": [
+        "core/Managers/",
+        "core/psi/"
+      ]
     },
     "files": [
       "core/Functions.php"
