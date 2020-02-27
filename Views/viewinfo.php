@@ -38,11 +38,11 @@ require_once "packages/example.example/MyPackage.php";
             if (GlobalManager::CheckVersion())
             {
                 print "<a class=\"item\">
-                PHP 7.4.1 <div class=\"ui horizontal green label\">Yes</div>
+                PHP 7 <div class=\"ui horizontal green label\">Yes</div>
             </a>";
             } else {
                 print "<a class=\"item\">
-                PHP 7.4.1 <div class=\"ui horizontal red label\">No</div>
+                PHP 7 <div class=\"ui horizontal red label\">No</div>
             </a>";
             }
             if (GlobalManager::CheckHtaccess())
