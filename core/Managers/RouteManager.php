@@ -13,6 +13,7 @@ class RouteManager extends Manager
     {
         self::$Router = $Router;
 
+
         $Router->get("/", function () {
             ViewsManager::GetView("index");
         });
@@ -36,7 +37,14 @@ class RouteManager extends Manager
             ViewsManager::GetView("viewinfo");
         });
 
+
+
         self::Run();
+    }
+
+    public static function mySelf($fn,Router $Router)
+    {
+        $fn($Router);
     }
 
     static private function Run()
