@@ -65,7 +65,9 @@
                     </a>";
             }
 
-            if (file_exists("js/main.js"))
+            require_once "packages/flexice.door/Checker.php";
+
+            if (Checker::IsFile("js/main.js"))
             {
                 print "<a class=\"item\">
                             Main.js there is <div class=\"ui horizontal green label\">Yes</div>
